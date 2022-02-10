@@ -6,3 +6,5 @@ React Bootstrap is used in this project : https://react-bootstrap.github.io/
 React Material UI is also used for design : https://mui.com/
 
 for fetching API, axios is used : npm install axios
+
+API : https://disease.sh/v3/covid-19/gov/india
