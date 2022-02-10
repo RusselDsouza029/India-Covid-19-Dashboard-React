@@ -1,0 +1,16 @@
+{
+  "files": {
+    "main.css": "/India-Covid-19-Dashboard-React/static/css/main.4a0d6d36.css",
+    "main.js": "/India-Covid-19-Dashboard-React/static/js/main.42760f37.js",
+    "static/js/787.b4f08016.chunk.js": "/India-Covid-19-Dashboard-React/static/js/787.b4f08016.chunk.js",
+    "static/media/logo.svg": "/India-Covid-19-Dashboard-React/static/media/logo.6ce24c58023cc2f8fd88fe9d219db6c6.svg",
+    "index.html": "/India-Covid-19-Dashboard-React/index.html",
+    "main.4a0d6d36.css.map": "/India-Covid-19-Dashboard-React/static/css/main.4a0d6d36.css.map",
+    "main.42760f37.js.map": "/India-Covid-19-Dashboard-React/static/js/main.42760f37.js.map",
+    "787.b4f08016.chunk.js.map": "/India-Covid-19-Dashboard-React/static/js/787.b4f08016.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.4a0d6d36.css",
+    "static/js/main.42760f37.js"
+  ]
+}
