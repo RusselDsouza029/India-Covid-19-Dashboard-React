@@ -1,0 +1,22 @@
+.positive_color:hover{
+    color: green;
+    border: 1px solid;
+}
+
+.negative_color:hover{
+    color: red;
+    border: 1px solid;
+}
+
+.p_heading{
+    font-size: 35px;
+    margin-bottom: 30px;
+}
+
+.card_container{
+    display: flex;
+}
+
+.card{
+    margin-left: 20px;
+}
