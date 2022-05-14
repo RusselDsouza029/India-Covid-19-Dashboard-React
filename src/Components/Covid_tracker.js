@@ -19,14 +19,14 @@ const Covid_tracker = () => {
     const [totalData, setTotalData] = useState([])
     const covid_data = () => {
         axios.get('https://disease.sh/v3/covid-19/gov/india')
-            .then(function (response) {
+            .then((response) => {
                 console.log(response.data.states);
                 setData(response.data.states);
 
                 // total data
                 setTotalData(response.data.total)
             })
-            .catch(function (error) {
+            .catch((error) => {
                 console.log(error);
             })
     }
@@ -39,81 +39,75 @@ const Covid_tracker = () => {
             <br />
             <p className="p_heading"><b>India</b> Covid-19 Dashboard</p>
             <Container className='card_container'>
-            <Card className='card' border="primary" style={{ width: '18rem' }}>
-                <Card.Header>Total Active</Card.Header>
-                <Card.Body>
-                    <Card.Text
-                    style={{
-                        fontSize: 40,
-                    }}>
-                       {totalData.active}
-                    </Card.Text>
-                </Card.Body>
-            </Card>
+                <Card className='card' border="primary">
+                    <Card.Header className='cardHeader'>Total Active</Card.Header>
+                    <Card.Body>
+                        <Card.Text
+                            className="cardItem"
+                        >
+                            {totalData.active}
+                        </Card.Text>
+                    </Card.Body>
+                </Card>
 
-            <Card className='card' border="success" style={{ width: '18rem' }}>
-                <Card.Header>Total Cases</Card.Header>
-                <Card.Body>
-                    <Card.Text
-                    style={{
-                        fontSize: 40,
-                    }}>
-                    {totalData.cases}
-                    </Card.Text>
-                </Card.Body>
-            </Card>
+                <Card className='card' border="success">
+                    <Card.Header className='cardHeader'>Total Cases</Card.Header>
+                    <Card.Body>
+                        <Card.Text
+                            className="cardItem"
+                        >
+                            {totalData.cases}
+                        </Card.Text>
+                    </Card.Body>
+                </Card>
 
-            <Card className='card' border="danger" style={{ width: '18rem' }}>
-                <Card.Header>Total Deaths</Card.Header>
-                <Card.Body>
-                    <Card.Text
-                    style={{
-                        fontSize: 40,
-                    }}
-                    >
-                        {totalData.deaths}
-                    </Card.Text>
-                </Card.Body>
-            </Card>
+                <Card className='card' border="danger">
+                    <Card.Header className='cardHeader'>Total Deaths</Card.Header>
+                    <Card.Body>
+                        <Card.Text
+                            className="cardItem"
+                        >
+                            {totalData.deaths}
+                        </Card.Text>
+                    </Card.Body>
+                </Card>
 
-            <Card className='card' border="dark" style={{ width: '18rem' }}>
-                <Card.Header>Total Recovered</Card.Header>
-                <Card.Body>
-                    <Card.Text
-                    style={{
-                        fontSize: 40,
-                    }}
-                    >
-                    {totalData.recovered}
-                    </Card.Text>
-                </Card.Body>
-            </Card>
+                <Card className='card' border="dark">
+                    <Card.Header className='cardHeader'>Total Recovered</Card.Header>
+                    <Card.Body>
+                        <Card.Text
+                            className="cardItem"
+                        >
+                            {totalData.recovered}
+                        </Card.Text>
+                    </Card.Body>
+                </Card>
             </Container>
             <Paper
-                sx={{
-                    overflow: 'hidden',
-                    m: 10,
-                }}>
-                <TableContainer>
+                className='tableContainer'
+            >
+                <TableContainer
+                className='TableContainer'
+                >
                     <Table stickyHeader aria-label="sticky table">
                         <TableHead>
                             <TableRow align='justify'>
-                                <TableCell align="justify"><b>States</b></TableCell>
-                                <TableCell align="justify"><b>Active</b></TableCell>
-                                <TableCell align="justify"><b>Cases</b></TableCell>
-                                <TableCell align="justify"><b>Deaths</b></TableCell>
-                                <TableCell align="justify"><b>Recovered</b></TableCell>
+                                <TableCell align="justify" className="tableHeading"><b>States</b></TableCell>
+                                <TableCell align="justify" className="tableHeading"><b>Active</b></TableCell>
+                                <TableCell align="justify" className="tableHeading"><b>Cases</b></TableCell>
+                                <TableCell align="justify" className="tableHeading"><b>Deaths</b></TableCell>
+                                <TableCell align="justify" className="tableHeading"><b>Recovered</b></TableCell>
                             </TableRow>
                         </TableHead>
                         <TableBody>
                             {data.map((showData, index) => {
                                 return (
                                     <TableRow key={index}>
-                                        <TableCell align="justify" className='positive_color'>{showData.state}</TableCell>
-                                        <TableCell align="justify" className='positive_color'>{showData.active}</TableCell>
-                                        <TableCell align="justify" className='positive_color'>{showData.cases}</TableCell>
-                                        <TableCell align="justify" className='negative_color'>{showData.deaths}</TableCell>
-                                        <TableCell align="justify" className='positive_color'>{showData.recovered}</TableCell>
+                                        <TableCell align="justify" className='positive_color tableHeading'>{showData.state}</TableCell>
+                                        <TableCell align="justify" className='positive_color tableHeading'>{showData.active}</TableCell>
+                                        <TableCell align="justify" className='positive_color tableHeading'>{showData.cases}</TableCell>
+                                        <TableCell align="justify" className='negative_color tableHeading'>{showData.deaths}</TableCell>
+                                        <TableCell align="justify" className='positive_color tableHeading'>{showData.recovered}</TableCell>
                                     </TableRow>
                                 )
                             })}
