@@ -1,10 +1,14 @@
-## India Covid-19 Dashboard using React
-Visit Web Application https://russeldsouza029.github.io/India-Covid-19-Dashboard-React/
+# Indian COVID-19 Application
 
-React Bootstrap is used in this project : https://react-bootstrap.github.io/
+The Indian COVID-19 Application provides information about COVID-19 cases all over India.
 
-React Material UI is also used for design : https://mui.com/
+## Features
 
-for fetching API, axios is used : npm install axios
+- User Interface: The application utilizes Bootstrap for a responsive and user-friendly UI.
+- Data Source: COVID-19 data is sourced from a third-party API.
 
-API : https://disease.sh/v3/covid-19/gov/india
+## Technologies Used
+
+- React JS
+- Bootstrap
+- Axios
